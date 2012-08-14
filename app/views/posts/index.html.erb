@@ -1,0 +1,11 @@
+<h1>Test blog</h1>
+
+
+<% @posts.each do |post| %>
+  <h1><%= link_to post.title, post %></h1>
+  <p><%= time_ago_in_words post.created_at %> ago</p>
+  <p><%= post.text %></p>
+<% end %>
+
+
+<%= link_to 'New Post', new_post_path %>
